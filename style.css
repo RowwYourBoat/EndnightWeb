@@ -1,6 +1,6 @@
 @font-face {
     font-family: brandon-grotesque;
-    src:url("/assets/brandon.otf");
+    src:url("/assets/brandon-black.otf");
 }
 
 /* -------------------------- HEADER --------------------------  */
@@ -30,16 +30,13 @@ header {
     list-style-type: none;
     padding-left: 0;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     float: right;
-    letter-spacing: .03em;
-    margin-right: 25px;
+    margin-right: 0
 }
 
 .nav-button {
-    font-size: 17px;
-    font-weight: 700;
-    font-family: brandon-grotesque, sans-serif;
+    font-family: "brandon-grotesque", "helvetica neue", "helvetica", sans-serif;
     color: #fff;
     text-decoration: none;
 }
@@ -86,13 +83,35 @@ body {
 .intro {
     width: 100%;
     height: 20%;
+    position: relative;
 }
 
 .infographic {
     height: inherit;
     width: inherit;
+    position: relative;
 }
 
 #the-forest-logo {
+    top: 20%;
+    left: 50%;
     z-index: 2;
+    position: absolute;
+    transform: translate(-50%);
+    width: 23%;
+}
+
+#info-text {
+    top: 37%;
+    left: 50%;
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%);
+    text-align: center;
+    width: 40%;
+    letter-spacing: .03em;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    font-family: "brandon-grotesque", "helvetica neue", "helvetica", sans-serif;
 }
