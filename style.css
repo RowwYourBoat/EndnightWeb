@@ -3,10 +3,15 @@
     src:url("/assets/brandon-black.otf");
 }
 
+@font-face {
+    font-family: brandon-medium;
+    src:url("/assets/brandon-medium.otf");
+}
+
 /* -------------------------- HEADER --------------------------  */
 
 header {
-    max-width: 100%;
+    width: 100%;
     height: 60px;
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.8));
     padding-top: 60px;
@@ -35,12 +40,6 @@ header {
     margin-right: 0
 }
 
-.nav-button {
-    font-family: "brandon-grotesque", "helvetica neue", "helvetica", sans-serif;
-    color: #fff;
-    text-decoration: none;
-}
-
 .nav-button:hover {
     color: #e7cb30;
 }
@@ -66,7 +65,7 @@ header {
         width: 200px;
     }
     header {
-        width: 100%;
+        padding-top: 20px
     }
 }
 
@@ -76,42 +75,63 @@ header {
 
 /* -------------------------- BODY --------------------------  */
 
-body {
+body, header, a {
     margin: 0;
+    font-family: "brandon-grotesque", "helvetica neue", "helvetica", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
 }
 
-.intro {
+.main-container {
     width: 100%;
-    height: 20%;
+    height: 6000px;
     position: relative;
+    overflow: hidden;
 }
 
-.infographic {
-    height: inherit;
-    width: inherit;
-    position: relative;
-}
-
-#the-forest-logo {
-    top: 20%;
-    left: 50%;
-    z-index: 2;
+.intro-container {
+    background-image: url("/assets/theforest_hero.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 800px;
     position: absolute;
-    transform: translate(-50%);
-    width: 23%;
+    transform:scale(1.1);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 100px;
+    gap: 13px
+}
+
+#game-logo {
+    width: 330px;
 }
 
 #info-text {
-    top: 37%;
-    left: 50%;
-    z-index: 2;
-    position: absolute;
-    transform: translate(-50%);
+    width: 470px;
     text-align: center;
-    width: 40%;
-    letter-spacing: .03em;
-    font-weight: 700;
     font-size: 24px;
-    color: white;
-    font-family: "brandon-grotesque", "helvetica neue", "helvetica", sans-serif;
+    font-family: brandon-medium, sans-serif;
+}
+
+#buy-button {
+    font-size: 14px;
+    color: #e7cb30;
+    font-family: brandon-medium, sans-serif;
+    border: thin solid #e7cb30;
+    padding: 10px 40px 10px 40px;
+}
+
+#buy-button:hover {
+    background-color: #e7cb30;
+    color: #494309;
 }
