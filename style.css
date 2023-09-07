@@ -13,6 +13,11 @@
     src:url("/assets/brandon-bold.otf");
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /* -------------------------- HEADER --------------------------  */
 
 header {
@@ -34,6 +39,11 @@ header {
 #studio-logo {
     width: calc(17% - 20px);
     cursor: pointer;
+}
+
+#hamburger-icon {
+    height: 50px;
+    width: 50px;
 }
 
 .nav-button-list {
@@ -82,7 +92,6 @@ header {
 /* -------------------------- BODY --------------------------  */
 
 body, header, a {
-    margin: 0;
     font-family: brandon-black, sans-serif;
     color: #fff;
     text-decoration: none;
@@ -93,11 +102,10 @@ body, header, a {
 .main-container {
     width: 100%;
     height: 6000px;
-    position: relative;
+    position: absolute;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 100px
 }
 
 .intro-container {
@@ -106,7 +114,7 @@ body, header, a {
     background-position: 50% 50%;
     width: 100%;
     height: 800px;
-    position: absolute;
+    position: relative;
 
     display: flex;
     flex-flow: column wrap;
@@ -119,15 +127,15 @@ body, header, a {
     flex-flow: column nowrap;
     align-items: center;
     padding-bottom: 100px;
-    gap: 13px
+    gap: 35px
 }
 
 #game-logo {
-    width: 330px;
+    width: 360px;
 }
 
 #info-text {
-    width: 470px;
+    width: 500px;
     text-align: center;
     font-size: 24px;
     font-family: brandon-medium, sans-serif;
@@ -155,7 +163,84 @@ body, header, a {
 
 .description-container {
     width: 100%;
-    height: 400px;
-    background-color: black;
+    height: 850px;
+    background-color: #ffffff;
     position: relative;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.description-container:before {
+    content: "";
+    display: inline-block;
+    background-image: url("/assets/texture-white-top-2.png");
+    background-size: contain;
+    background-position: 50% 100%;
+    position: absolute;
+    background-repeat: repeat-x;
+    transform: translateY(-150%);
+    width: 100%;
+    height: 68px;
+}
+
+.availability-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 300px;
+}
+
+#available-for-text {
+    color: black;
+    margin-bottom: 50px;
+    font-size: 27px;
+}
+
+#available-for-text:before {
+    content: "";
+    border-top: 3px solid rgba(233,233,233,0.55);
+    display: block;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    max-width: 80px;
+}
+
+.store-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 45px;
+}
+
+.store-img {
+    width: 17.5%;
+    cursor: pointer;
+}
+
+#steam-logo {
+    height: 95%;
+}
+
+.description-text-container {
+    align-self: center;
+    transform: translateY(40%);
+    color: black;
+    display: flex;
+    gap: 40px
+}
+
+.description-paragraph {
+    font-family: brandon-medium, sans-serif;
+}
+
+.description-header {
+    margin-bottom: 20px
+}
+
+.description-paragraph {
+    margin-bottom: 35px;
 }
