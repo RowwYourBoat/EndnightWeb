@@ -24,7 +24,7 @@
 
 header {
     width: 100%;
-    min-height: 60px;
+    min-height: 10vh;
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.8));
     padding-top: 60px;
     padding-bottom: 60px;
@@ -32,7 +32,7 @@ header {
     position: fixed;
 }
 
-.header-nav {
+#header-nav {
     min-height: 60px;
     padding-left: 65px;
     padding-right: 65px;
@@ -48,7 +48,7 @@ header {
     width: 50px;
 }
 
-.nav-button-list {
+#nav-button-list {
     font-size: 1.1rem;
     list-style-type: none;
     padding-left: 0;
@@ -62,7 +62,7 @@ header {
     color: #e7cb30;
 }
 
-.nav-burger-menu {
+#nav-burger-menu {
     display: none;
     background: none;
     cursor: pointer;
@@ -73,10 +73,10 @@ header {
 }
 
 @media (max-width: 1010px) {
-    .nav-burger-menu {
+    #nav-burger-menu {
         display: block;
     }
-    .nav-button-list {
+    #nav-button-list {
         display: none;
     }
     #studio-logo {
@@ -103,43 +103,72 @@ body, header, a {
     line-height: 1.5;
 }
 
+#description-container:before, #screenshot-gallery:before {
+    content: "";
+    display: inline-block;
+    background-image: url("/assets/texture-white-top-2.png");
+    background-size: contain;
+    background-position: 50% 100%;
+    position: absolute;
+    background-repeat: repeat-x;
+    transform: translateY(-150%);
+    width: 100%;
+    min-height: 68px;
+}
+
+#description-container:after, #screenshot-gallery:after {
+    content: "";
+    display: inline-block;
+    background-image: url("/assets/texture-white-bottom.png");
+    background-size: contain;
+    background-position: 100% 15%;
+    position: absolute;
+    background-repeat: repeat-x;
+    transform: translateY(50%);
+    width: 100%;
+    min-height: 68px;
+    z-index: 2;
+}
+
 /* ----------------------------- HERO -----------------------------  */
 
-.main-container {
+#main-container {
     width: 100%;
     min-height: 6000px;
     position: relative;
     overflow: hidden;
 }
 
-.intro-container {
+#intro-container {
     background-image: url("/assets/theforest_hero.jpg");
     background-size: cover;
     background-position: center center;
     width: 100%;
-    min-height: 800px;
+    min-height: 100vh;
     position: relative;
 
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-content: center;
+
+    transform: scale(1.1);
 }
 
-.logo-container {
+#logo-container {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     gap: 35px
 }
 
 #game-logo {
-    width: 360px;
+    width: 330px;
 }
 
 #info-text {
-    width: 500px;
+    width: 35ch;
     text-align: center;
     font-size: 1.5rem;
     font-family: brandon-medium, sans-serif;
@@ -167,20 +196,7 @@ body, header, a {
 
 /* ----------------------------- GAME INFORMATION -----------------------------  */
 
-.description-container:before {
-    content: "";
-    display: inline-block;
-    background-image: url("/assets/texture-white-top-2.png");
-    background-size: contain;
-    background-position: 50% 100%;
-    position: absolute;
-    background-repeat: repeat-x;
-    transform: translateY(-150%);
-    width: 100%;
-    min-height: 68px;
-}
-
-.description-container {
+#description-container {
     color: black;
     width: 100%;
     min-height: 900px;
@@ -188,9 +204,10 @@ body, header, a {
     position: relative;
     padding-top: 40px;
     padding-bottom: 40px;
+    z-index: 2;
 }
 
-.availability-container {
+#availability-container {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -215,7 +232,7 @@ body, header, a {
     font-size: 1.7rem;
 }
 
-.store-list {
+#store-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,7 +241,7 @@ body, header, a {
 }
 
 .store-img {
-    width: 17.5vw;
+    width: 13.5vw;
     cursor: pointer;
 }
 
@@ -232,7 +249,7 @@ body, header, a {
     height: 95%;
 }
 
-.description-text-container {
+#description-text-container {
     position: relative;
     top: 4vh;
     color: black;
@@ -256,45 +273,42 @@ body, header, a {
     margin-bottom: 20px;
     font-size: 1.8rem;
     letter-spacing: 0.05rem;
+    font-family: brandon-medium, sans-serif;
 }
 
 .bold-span {
     font-family: brandon-black, sans-serif;
 }
 
-.description-container:after {
-    content: "";
-    display: inline-block;
-    background-image: url("/assets/texture-white-bottom.png");
-    background-size: contain;
-    background-position: 100% 15%;
-    position: absolute;
-    background-repeat: repeat-x;
-    transform: translateY(50%);
-    width: 100%;
-    min-height: 68px;
-}
-
 /* ----------------------------- TRAILER -----------------------------  */
 
-.video-background {
+#video-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 40px;
+    position: relative;
     background-image: url("/assets/tree-chopping.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 150vh;
+    min-height: 200vh;
+    transform: scale(1.15);
 }
 
-.player-count-container {
+#player-count-container {
     position: relative;
-    top: 100px;
     display: flex;
-    justify-content: center;
     align-items: baseline;
-    flex-flow: wrap;
-    gap: 20px;
-    min-height: 30%;
+    gap: 2px;
+    min-height: 10vh;
+    z-index: 3;
+}
+
+.player-count-element {
+    transform: scale(0.8);
 }
 
 #count {
@@ -302,6 +316,7 @@ body, header, a {
     padding: 10px 10px;
     font-size: 1.6rem;
     color: black;
+    margin-bottom: 40px;
 }
 
 #steam-icon {
@@ -311,6 +326,64 @@ body, header, a {
 
 #trailer-3 {
     position: relative;
+    display: block;
     border: none;
-    transform: translate(50%, 50%);
+    width: 60vw;
+    min-height: 80vh;
+}
+
+#video-container-bottom {
+    display: flex;
+    font-family: brandon-medium, sans-serif;
+    font-size: 1.4rem;
+}
+
+.review-text {
+    margin-top: 7px;
+    width: 32.5ch;
+    min-height: 7.5ch;
+}
+
+#left-review-text {
+    width: 20ch;
+}
+
+#left-review-container {
+    padding-right: 25px;
+}
+
+#right-review-container {
+    padding-left: 30px;
+}
+
+#review-divider {
+    width: 3px;
+    min-height: 100%;
+    background-color: #545454;
+}
+
+/* ----------------------------- SCREENSHOT GALLERY -----------------------------  */
+
+#screenshot-gallery {
+    background-color: white;
+    position: relative;
+    width: 100vw;
+    min-height: 200vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: url("/assets/splatter-yellow-white.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+#screenshot-gallery-center {
+
+}
+
+#screenshot-gallery-header {
+    color: black;
 }
