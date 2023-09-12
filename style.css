@@ -103,7 +103,7 @@ body, header, a {
     line-height: 1.5;
 }
 
-#description-container:before, #screenshot-gallery:before {
+#description-container:before, #screenshot-gallery-background:before, #video-gallery:before {
     content: "";
     display: inline-block;
     background-image: url("/assets/texture-white-top-2.png");
@@ -116,7 +116,12 @@ body, header, a {
     min-height: 68px;
 }
 
-#description-container:after, #screenshot-gallery:after {
+#video-gallery:before {
+    background-image: url("/assets/texture-black-top.png");
+    transform: translateY(-100%);
+}
+
+#description-container:after {
     content: "";
     display: inline-block;
     background-image: url("/assets/texture-white-bottom.png");
@@ -134,7 +139,7 @@ body, header, a {
 
 #main-container {
     width: 100%;
-    min-height: 6000px;
+    min-height: 8000px;
     position: relative;
     overflow: hidden;
 }
@@ -284,9 +289,8 @@ body, header, a {
 
 #video-background {
     display: flex;
+    flex-flow: column wrap;
     justify-content: center;
-    align-items: center;
-    flex-flow: column;
     gap: 40px;
     position: relative;
     background-image: url("/assets/tree-chopping.jpg");
@@ -294,14 +298,15 @@ body, header, a {
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 200vh;
+    min-height: 100vh;
     transform: scale(1.15);
 }
 
 #player-count-container {
-    position: relative;
     display: flex;
     align-items: baseline;
+    max-width: 1200px;
+    width: 100%;
     gap: 2px;
     min-height: 10vh;
     z-index: 3;
@@ -325,27 +330,28 @@ body, header, a {
 }
 
 #trailer-3 {
-    position: relative;
     display: block;
     border: none;
-    width: 60vw;
-    min-height: 80vh;
+    width: 35vw;
+    min-height: 40vh;
+    margin: 0 auto;
 }
 
-#video-container-bottom {
+#review-containers {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
     font-family: brandon-medium, sans-serif;
     font-size: 1.4rem;
 }
 
 .review-text {
     margin-top: 7px;
-    width: 32.5ch;
-    min-height: 7.5ch;
 }
-
-#left-review-text {
-    width: 20ch;
+#right-review-text {
+    width: 50%;
 }
 
 #left-review-container {
@@ -364,26 +370,81 @@ body, header, a {
 
 /* ----------------------------- SCREENSHOT GALLERY -----------------------------  */
 
-#screenshot-gallery {
+#screenshot-gallery-background {
     background-color: white;
     position: relative;
     width: 100vw;
-    min-height: 200vh;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 200px;
     background-image: url("/assets/splatter-yellow-white.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
 }
 
-#screenshot-gallery-center {
-
+#screenshot-gallery-header:before, #video-gallery-header:before {
+    content: "";
+    border-top: 3px solid rgba(233,233,233,0.55);
+    display: block;
+    margin-bottom: 4vh;
+    max-width: 80px;
 }
 
 #screenshot-gallery-header {
     color: black;
+    margin-bottom: 25px;
+    margin-left: 2px;
+    font-family: brandon-medium, sans-serif;
+}
+
+#gallery-items {
+    display: flex;
+    gap: 20px;
+    align-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.screenshot-gallery-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    width: calc(35% - 35px);
+}
+
+/* ----------------------------- VIDEO GALLERY -----------------------------  */
+
+#video-gallery {
+    position: relative;
+    width: 100vw;
+    min-height: 120vh;
+    background-color: black;
+}
+
+#video-gallery-header {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    padding-top: 100px;
+    font-family: brandon-medium, sans-serif;
+}
+
+#video-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-gallery-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-trailer {
+    width: 30%;
 }

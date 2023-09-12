@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="806c8783-e6df-4224-82a9-1ca36a186790" name="Changes" comment="Main #6" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2UkQ00G44AX8ob7CPLVkv03mXoc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rowan/OneDrive - Landstede Groep/Project Web P1/Endnight Games&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="806c8783-e6df-4224-82a9-1ca36a186790" name="Changes" comment="" />
+      <created>1693480871484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693480871484</updated>
+      <workItem from="1693480872515" duration="2124000" />
+      <workItem from="1693745619486" duration="758000" />
+      <workItem from="1693808140696" duration="21087000" />
+      <workItem from="1693835751755" duration="23000" />
+      <workItem from="1693894528075" duration="5551000" />
+      <workItem from="1693904939001" duration="2951000" />
+      <workItem from="1693931887230" duration="121000" />
+      <workItem from="1693981268710" duration="4395000" />
+      <workItem from="1694002897551" duration="1255000" />
+      <workItem from="1694067437840" duration="11586000" />
+      <workItem from="1694153705872" duration="8223000" />
+    </task>
+    <task id="LOCAL-00001" summary="Header Completion">
+      <option name="closed" value="true" />
+      <created>1693830460762</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693830460762</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Body #1">
+      <option name="closed" value="true" />
+      <created>1693835676533</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693835676533</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Main #2">
+      <option name="closed" value="true" />
+      <created>1693907902535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693907902535</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Main #3">
+      <option name="closed" value="true" />
+      <created>1694004126383</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694004126383</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Main #4">
+      <option name="closed" value="true" />
+      <created>1694080654719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694080654719</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Main #6">
+      <option name="closed" value="true" />
+      <created>1694173008719</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694173008719</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="initial" />
+    <MESSAGE value="Header Completion" />
+    <MESSAGE value="Body #1" />
+    <MESSAGE value="Main #2" />
+    <MESSAGE value="Main #3" />
+    <MESSAGE value="Main #4" />
+    <MESSAGE value="Main #6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main #6" />
+  </component>
+</project>
