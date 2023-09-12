@@ -8,11 +8,6 @@
     src:url("/assets/brandon-medium.otf");
 }
 
-@font-face {
-    font-family: brandon-bold;
-    src:url("/assets/brandon-bold.otf");
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -33,9 +28,11 @@ header {
 }
 
 #header-nav {
+    max-width: 1800px;
     min-height: 60px;
     padding-left: 65px;
     padding-right: 65px;
+    margin: 0 auto;
 }
 
 #studio-logo {
@@ -51,10 +48,11 @@ header {
 #nav-button-list {
     font-size: 1.1rem;
     list-style-type: none;
-    padding-left: 0;
+    padding-top: 20px;
     display: flex;
-    gap: 25px;
+    flex-wrap: wrap;
     float: right;
+    gap: 25px;
     margin-right: 0
 }
 
@@ -118,10 +116,10 @@ body, header, a {
 
 #video-gallery:before {
     background-image: url("/assets/texture-black-top.png");
-    transform: translateY(-100%);
+    transform: translateY(-150%);
 }
 
-#description-container:after {
+#description-container:after, #video-gallery:after {
     content: "";
     display: inline-block;
     background-image: url("/assets/texture-white-bottom.png");
@@ -129,10 +127,15 @@ body, header, a {
     background-position: 100% 15%;
     position: absolute;
     background-repeat: repeat-x;
-    transform: translateY(50%);
+    transform: translateY(110%);
     width: 100%;
     min-height: 68px;
     z-index: 2;
+}
+
+#video-gallery:after {
+    background-image: url("/assets/texture-black-bottom.png");
+    transform: translateY(280%);
 }
 
 /* ----------------------------- HERO -----------------------------  */
@@ -208,7 +211,7 @@ body, header, a {
     background-color: #ffffff;
     position: relative;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     z-index: 2;
 }
 
@@ -307,8 +310,9 @@ body, header, a {
     align-items: baseline;
     max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
+    padding: 0 100px;
     gap: 2px;
-    min-height: 10vh;
     z-index: 3;
 }
 
@@ -332,9 +336,10 @@ body, header, a {
 #trailer-3 {
     display: block;
     border: none;
-    width: 35vw;
-    min-height: 40vh;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 100px;
 }
 
 #review-containers {
@@ -342,14 +347,15 @@ body, header, a {
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1200px;
-    width: 100%;
     font-family: brandon-medium, sans-serif;
     font-size: 1.4rem;
+    margin: 0 auto;
 }
 
 .review-text {
     margin-top: 7px;
 }
+
 #right-review-text {
     width: 50%;
 }
@@ -420,7 +426,8 @@ body, header, a {
 #video-gallery {
     position: relative;
     width: 100vw;
-    min-height: 120vh;
+    padding-top: 40px;
+    padding-bottom: 200px;
     background-color: black;
 }
 
@@ -447,4 +454,67 @@ body, header, a {
 
 .gallery-trailer {
     width: 30%;
+}
+
+/* ----------------------------- PATCH NOTES -----------------------------  */
+
+#patch-notes-background {
+    background-image: url("/assets/hangingcannibal.png");
+    background-position: center center;
+    background-size: cover;
+
+    height: 100vh;
+
+    font-family: brandon-medium, sans-serif;
+    font-style: normal;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#patch-notes-header {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    font-family: brandon-black, sans-serif;
+}
+
+#patch-notes-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-flow: row wrap;
+}
+
+.patch-note-dates {
+    color: #545454;
+    font-size: .9rem;
+    font-family: brandon-black, sans-serif;
+}
+
+.patch-note-headers {
+    padding: 5px 0;
+    margin: 10px 0 30px 0;
+    background-color: #e7cb30;
+    width: 130px;
+
+    color: black;
+    text-align: center;
+    font-family: brandon-black, sans-serif;
+}
+
+.patch-note {
+    width: 40%;
+    height: 40%;
+}
+
+.note {
+    font-size: 1.25rem;
 }
