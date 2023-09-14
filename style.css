@@ -19,29 +19,25 @@
 
 header {
     width: 100%;
-    min-height: 10vh;
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.8));
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0 60px 0;
     z-index: 10;
     position: fixed;
 }
 
 #header-nav {
     max-width: 1800px;
-    min-height: 60px;
     padding-left: 65px;
     padding-right: 65px;
     margin: 0 auto;
 }
 
 #studio-logo {
-    width: calc(17% - 20px);
+    width: 290px;
     cursor: pointer;
 }
 
 #hamburger-icon {
-    min-height: 50px;
     width: 50px;
 }
 
@@ -66,11 +62,22 @@ header {
     cursor: pointer;
     float: right;
     width: 50px;
-    min-height: 50px;
     border: none;
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 1930px) {
+    header {
+        padding: 35px 0 35px 0;
+    }
+}
+
+@media (max-width: 1210px) {
+    #studio-logo {
+        width: 180px;
+    }
+}
+
+@media (max-width: 1085px) {
     #nav-burger-menu {
         display: block;
     }
@@ -82,6 +89,18 @@ header {
     }
     header {
         padding-top: 20px
+    }
+    #header-nav {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    #studio-logo {
+        width: 100px;
+    }
+    #hamburger-icon {
+        width: 30px;
     }
 }
 
@@ -101,7 +120,7 @@ body, header, a {
     line-height: 1.5;
 }
 
-#description-container:before, #screenshot-gallery-background:before, #video-gallery:before {
+#description-container:before, #screenshot-gallery-background:before, #video-gallery:before, #studio-info-background:before {
     content: "";
     display: inline-block;
     background-image: url("/assets/texture-white-top-2.png");
@@ -119,6 +138,11 @@ body, header, a {
     transform: translateY(-150%);
 }
 
+#studio-info-background:before {
+    background-image: url("/assets/texture-yellow-top.png");
+    transform: translateY(-245%);
+}
+
 #description-container:after, #video-gallery:after {
     content: "";
     display: inline-block;
@@ -127,10 +151,10 @@ body, header, a {
     background-position: 100% 15%;
     position: absolute;
     background-repeat: repeat-x;
-    transform: translateY(110%);
+    transform: translateY(105%);
     width: 100%;
-    min-height: 68px;
     z-index: 2;
+    min-height: 68px;
 }
 
 #video-gallery:after {
@@ -142,7 +166,6 @@ body, header, a {
 
 #main-container {
     width: 100%;
-    min-height: 8000px;
     position: relative;
     overflow: hidden;
 }
@@ -160,6 +183,9 @@ body, header, a {
     justify-content: center;
     align-content: center;
 
+    padding: 100px 0 100px 0;
+    box-sizing: border-box;
+
     transform: scale(1.1);
 }
 
@@ -167,7 +193,8 @@ body, header, a {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding-bottom: 40px;
+    box-sizing: border-box;
+    padding: 0 100px 40px 100px;
     gap: 35px
 }
 
@@ -175,15 +202,22 @@ body, header, a {
     width: 330px;
 }
 
+@media (max-width: 390px) {
+    #game-logo {
+        width: 250px;
+    }
+}
+
 #info-text {
-    width: 35ch;
+    width: 765px;
     text-align: center;
     font-size: 1.5rem;
     font-family: brandon-medium, sans-serif;
-
+    padding: 0 100px 0 100px;
+    box-sizing: border-box;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 650px) {
     #info-text {
         width: 430px;
     }
@@ -207,7 +241,6 @@ body, header, a {
 #description-container {
     color: black;
     width: 100%;
-    min-height: 900px;
     background-color: #ffffff;
     position: relative;
     padding-top: 40px;
@@ -216,12 +249,9 @@ body, header, a {
 }
 
 #availability-container {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    min-height: 300px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 #available-for-text:before {
@@ -236,11 +266,14 @@ body, header, a {
 
 #available-for-text {
     color: black;
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
+    text-align: center;
     font-size: 1.7rem;
 }
 
 #store-list {
+    margin: 0 auto 50px auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,8 +281,32 @@ body, header, a {
     gap: 45px;
 }
 
+@media (max-width: 975px) {
+    #store-list {
+        display: block;
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 100px 0 100px;
+    }
+    .store-img {
+        margin: 20px auto 20px auto;
+    }
+    #available-for-text {
+        margin: 0 auto 25px auto;
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .store-img {
+        width: 100%;
+    }
+}
+
 .store-img {
-    width: 13.5vw;
+    max-width: 190px;
     cursor: pointer;
 }
 
@@ -261,13 +318,20 @@ body, header, a {
     position: relative;
     top: 4vh;
     color: black;
-    display: flex;
-    gap: 40px;
     max-width: 100ch;
-    min-height: 40vh;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 40px;
+}
+
+@media (max-width: 425px) {
+    #description-text-container {
+        flex-flow: column nowrap;
+    }
 }
 
 .description-paragraph {
@@ -290,10 +354,13 @@ body, header, a {
 
 /* ----------------------------- TRAILER -----------------------------  */
 
+.trailer-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 #video-background {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
     gap: 40px;
     position: relative;
     background-image: url("/assets/tree-chopping.jpg");
@@ -301,31 +368,37 @@ body, header, a {
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 100vh;
     transform: scale(1.15);
+
+    padding: 250px 0;
 }
 
 #player-count-container {
     display: flex;
     align-items: baseline;
-    max-width: 1200px;
+    justify-content: left;
+    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 100px;
-    gap: 2px;
-    z-index: 3;
+    box-sizing: border-box;
+
+    padding: 0 100px 30px 100px;
 }
 
 .player-count-element {
-    transform: scale(0.8);
+    margin: 0 10px 0 10px;
 }
 
 #count {
     background-color: #e7cb30;
     padding: 10px 10px;
-    font-size: 1.6rem;
+    font-size: 1.35rem;
     color: black;
-    margin-bottom: 40px;
+    margin-left: 0;
+}
+
+#players-in-game-text {
+    font-size: .75rem;
 }
 
 #steam-icon {
@@ -335,43 +408,72 @@ body, header, a {
 
 #trailer-3 {
     display: block;
-    border: none;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    box-sizing: border-box;
+
+    max-width: 1100px;
     padding: 0 100px;
+}
+
+@media (max-width: 600px) {
+    #trailer-3 {
+        padding: 0 30px;
+        max-width: 400px;
+    }
+    #player-count-container {
+        padding: 0 30px 30px 30px;
+        max-width: 400px;
+    }
+    #players-in-game-text {
+        font-size: .65rem;
+    }
 }
 
 #review-containers {
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
     font-family: brandon-medium, sans-serif;
     font-size: 1.4rem;
-    margin: 0 auto;
+
+    padding: 50px 100px 0 100px;
 }
 
 .review-text {
     margin-top: 7px;
 }
 
-#right-review-text {
-    width: 50%;
-}
-
 #left-review-container {
-    padding-right: 25px;
+    padding-right: 80px;
 }
 
 #right-review-container {
+    width: 55%;
     padding-left: 30px;
 }
 
 #review-divider {
     width: 3px;
-    min-height: 100%;
     background-color: #545454;
+}
+
+@media (max-width: 800px) {
+    #review-divider {
+        display: none;
+    }
+    #review-containers {
+        flex-direction: column;
+        gap: 60px;
+        margin: 0 auto;
+        padding: 50px 40px 0 40px;
+        width: 100%;
+    }
+    #left-review-container {
+        padding-right: 0;
+        width: 100%;
+    }
+    #right-review-container {
+        padding-left: 0;
+    }
 }
 
 /* ----------------------------- SCREENSHOT GALLERY -----------------------------  */
@@ -385,10 +487,9 @@ body, header, a {
     background-image: url("/assets/splatter-yellow-white.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
 }
 
-#screenshot-gallery-header:before, #video-gallery-header:before {
+#screenshot-gallery-header:before, #video-gallery-header:before, #updates-header:before {
     content: "";
     border-top: 3px solid rgba(233,233,233,0.55);
     display: block;
@@ -415,10 +516,32 @@ body, header, a {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 100px 0 100px;
+    box-sizing: border-box;
 }
 
 .gallery-item {
     width: calc(35% - 35px);
+}
+
+@media (max-width: 1000px) {
+    .gallery-item {
+        width: calc(50% - 10px);
+        max-width: 800px;
+    }
+    .screenshot-gallery-container {
+        padding: 0 50px 0 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-item {
+        width: 100%;
+        max-width: 600px;
+    }
+    .screenshot-gallery-container {
+        padding: 0 25px 0 25px;
+    }
 }
 
 /* ----------------------------- VIDEO GALLERY -----------------------------  */
@@ -433,27 +556,65 @@ body, header, a {
 
 #video-gallery-header {
     font-size: 1.6rem;
-    margin-bottom: 20px;
     padding-top: 100px;
-    font-family: brandon-medium, sans-serif;
-}
+    font-family: brandon-black, sans-serif;
+    width: 100%;
 
-#video-container {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: space-around;
-    justify-content: center;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
 }
 
 .video-gallery-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
 }
 
 .gallery-trailer {
-    width: 30%;
+    width: 32.5%;
+    height: 220px;
+    border: 0;
+
+}
+
+@media (max-width: 1150px) {
+    .video-gallery-container {
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+    }
+    .gallery-trailer {
+        height: 600px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    .gallery-trailer {
+        height: 500px;
+    }
+}
+@media (max-width: 800px) {
+    .gallery-trailer {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-trailer {
+        height: 250px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .gallery-trailer {
+        height: 150px;
+        margin-bottom: 15px;
+    }
 }
 
 /* ----------------------------- PATCH NOTES -----------------------------  */
@@ -462,35 +623,71 @@ body, header, a {
     background-image: url("/assets/hangingcannibal.png");
     background-position: center center;
     background-size: cover;
+    padding: 150px 0 150px 0;
 
-    height: 100vh;
+    text-align: center;
 
     font-family: brandon-medium, sans-serif;
     font-style: normal;
+}
 
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
+.patch-notes-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 100px 0 100px;
 }
 
 #patch-notes-header {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-
+    padding-bottom: 50px;
+    max-width: 1400px;
     font-family: brandon-black, sans-serif;
+    font-size: 1.25rem;
 }
 
-#patch-notes-container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
+#updates-header {
+    display: inline;
+}
+
+#view-all-button {
+    color: #e7cb30;
+    font-size: .9rem;
+    display: inline;
+    position: relative;
+    bottom: 4px;
+    padding-left: 30px;
+}
+
+#patch-notes-holder {
+    box-sizing: border-box;
 
     display: flex;
-    justify-content: center;
     gap: 50px;
     flex-flow: row wrap;
+    max-width: 1400px;
+}
+
+.patch-note {
+    width: 47.5%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    #patch-notes-holder {
+        display: block;
+    }
+    .patch-note {
+        margin: 0 0 50px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .patch-notes-container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 .patch-note-dates {
@@ -504,17 +701,130 @@ body, header, a {
     margin: 10px 0 30px 0;
     background-color: #e7cb30;
     width: 130px;
+    box-sizing: border-box;
 
     color: black;
     text-align: center;
     font-family: brandon-black, sans-serif;
 }
 
-.patch-note {
-    width: 40%;
-    height: 40%;
+.note, .note-greeting {
+    font-size: 1.35rem;
 }
 
-.note {
-    font-size: 1.25rem;
+.note-greeting {
+    padding-bottom: 40px;
+}
+
+.note-ver {
+    padding-top: 40px;
+}
+
+#note-ver-bottom-margin {
+    padding-bottom: 20px;
+}
+
+#patch-notes-page-selector {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 100px 0 100px;
+    box-sizing: border-box;
+
+    font-size: 1.1rem;
+}
+
+#page-num {
+    display: inline;
+    padding-right: 20px;
+}
+
+#next-page-arrows {
+    display: inline;
+    color: #e7cb30;
+    clip: rect(1px 1px 1px 1px);
+    overflow: hidden;
+    background-color: #1d1d1d;
+    padding: 7px 10px 7px 10px;
+    border-radius: 50%;
+    font-size: .8rem;
+}
+
+/* ----------------------------- STUDIO INFO / JOB OPENINGS -----------------------------  */
+
+#studio-info-background {
+    background-color: #e7cb30;
+    color: #514813;
+    padding: 100px 0 100px 0;
+
+    font-family: brandon-medium, sans-serif;
+}
+
+#studio-info-holder {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 100px 0 100px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+#yellow-studio-logo {
+    background-image: url("/assets/logo-yellow.png");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 140px;
+}
+
+#studio-description-container {
+    width: 300px;
+    height: 100px;
+}
+
+#studio-description {
+    font-size: 1.2rem;
+    width: 300px;
+}
+
+.job-button {
+    background-color: transparent;
+    border-color: #514813;
+    padding: 15px 40px 15px 40px;
+
+    font-family: brandon-black, sans-serif;
+    font-size: 1rem;
+    color: #514813;
+    height: 56px;
+}
+
+@media (max-width: 1070px) {
+    #studio-info-holder {
+        flex-flow: column nowrap;
+    }
+    #studio-description {
+        margin: 0 auto;
+        text-align: center;
+    }
+    #yellow-studio-logo {
+        background-position: center center;
+        width: 250px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .studio-info-container {
+        padding-bottom: 20px;
+    }
+    #studio-info-holder {
+        padding: 0 10px 0 10px;
+    }
+}
+
+.italic-span {
+    font-style: italic;
 }
