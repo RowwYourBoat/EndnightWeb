@@ -120,7 +120,7 @@ body, header, a {
     line-height: 1.5;
 }
 
-#description-container:before, #screenshot-gallery-background:before, #video-gallery:before, #studio-info-background:before {
+#description-container:before, #screenshot-gallery-background:before, #video-gallery:before, #studio-info-background:before, footer:before {
     content: "";
     display: inline-block;
     background-image: url("/assets/texture-white-top-2.png");
@@ -141,6 +141,12 @@ body, header, a {
 #studio-info-background:before {
     background-image: url("/assets/texture-yellow-top.png");
     transform: translateY(-245%);
+}
+
+footer:before {
+    background-image: url("/assets/trees-texture-grey-top.png");
+    transform: translateY(-165%);
+    background-position: 28% bottom;
 }
 
 #description-container:after, #video-gallery:after {
@@ -765,7 +771,7 @@ body, header, a {
 #studio-info-background {
     background-color: #e7cb30;
     color: #514813;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 150px 0;
 
     font-family: brandon-medium, sans-serif;
 }
@@ -836,4 +842,119 @@ body, header, a {
 
 .italic-span {
     font-style: italic;
+}
+
+/* ----------------------------- FOOTER -----------------------------  */
+
+footer {
+    padding: 50px 0 200px 0;
+    background-color: #222222;
+}
+
+#footer-container {
+    max-width: 1500px;
+    padding: 0 50px 0 50px;
+    margin: 0 auto;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#footer-studio-logo {
+    background-image: url("/assets/endnight-logo.png");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 25%;
+    width: 185px;
+    height: 75px;
+    margin-right: 50px;
+}
+
+#footer-company-info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    margin-right: 75px;
+}
+
+#footer-game-info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    margin-left: 75px;
+}
+
+.footer-link {
+    color: #545454;
+}
+
+#footer-social-media {
+    background-image: url("/assets/social-media-logos.png");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 32px;
+    margin-left: auto;
+}
+
+#footer-credit {
+    font-family: brandon-medium, sans-serif;
+    font-size: 1.07rem;
+    text-align: right;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: auto;
+}
+
+#credit {
+    margin-top: 30px;
+}
+
+.footer-gray {
+    color: #545454;
+}
+
+.gray-span {
+    color: #5b5b5b;
+    font-family: brandon-black, sans-serif;
+}
+
+@media (max-width: 1070px) {
+    footer:before {
+        transform: translateY(-240%);
+    }
+    footer {
+        padding: 100px 0 50px 0;
+    }
+    #footer-container {
+        max-width: 1500px;
+        padding: 0 25px 0 25px;
+
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    #footer-studio-logo {
+        margin: 0 auto 20px auto;
+    }
+    #footer-company-info {
+        margin: 0 auto 50px auto;
+        text-align: center;
+    }
+    #footer-game-info {
+        margin: 0 auto 50px auto;
+        text-align: center;
+    }
+    #footer-social-media {
+        background-position: center center;
+        margin: 0 auto 50px auto;
+    }
+    #footer-credit {
+        margin-left: unset;
+        text-align: center;
+    }
 }
