@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: brandon-medium;
-    src:url("/assets/brandon-medium.otf");
+    src:url("./assets/brandon-medium.otf");
 }
 
 * {
@@ -123,7 +123,7 @@ body, header, a {
 #description-container:before, #screenshot-gallery-background:before, #video-gallery:before, #studio-info-background:before, footer:before {
     content: "";
     display: inline-block;
-    background-image: url("/assets/texture-white-top-2.png");
+    background-image: url("./assets/texture-white-top-2.png");
     background-size: contain;
     background-position: 50% 100%;
     position: absolute;
@@ -134,17 +134,17 @@ body, header, a {
 }
 
 #video-gallery:before {
-    background-image: url("/assets/texture-black-top.png");
+    background-image: url("./assets/texture-black-top.png");
     transform: translateY(-150%);
 }
 
 #studio-info-background:before {
-    background-image: url("/assets/texture-yellow-top.png");
+    background-image: url("./assets/texture-yellow-top.png");
     transform: translateY(-245%);
 }
 
 footer:before {
-    background-image: url("/assets/trees-texture-grey-top.png");
+    background-image: url("./assets/trees-texture-grey-top.png");
     transform: translateY(-165%);
     background-position: 28% bottom;
 }
@@ -152,7 +152,7 @@ footer:before {
 #description-container:after, #video-gallery:after {
     content: "";
     display: inline-block;
-    background-image: url("/assets/texture-white-bottom.png");
+    background-image: url("./assets/texture-white-bottom.png");
     background-size: contain;
     background-position: 100% 15%;
     position: absolute;
@@ -164,7 +164,7 @@ footer:before {
 }
 
 #video-gallery:after {
-    background-image: url("/assets/texture-black-bottom.png");
+    background-image: url("./assets/texture-black-bottom.png");
     transform: translateY(130%);
 }
 
@@ -177,7 +177,7 @@ footer:before {
 }
 
 #intro-container {
-    background-image: url("/assets/theforest_hero.jpg");
+    background-image: url("./assets/theforest_hero.jpg");
     background-size: cover;
     background-position: center center;
     width: 100%;
@@ -369,7 +369,7 @@ footer:before {
 #video-background {
     gap: 40px;
     position: relative;
-    background-image: url("/assets/tree-chopping.jpg");
+    background-image: url("./assets/tree-chopping.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -500,7 +500,7 @@ footer:before {
     width: 100vw;
     padding-top: 40px;
     padding-bottom: 200px;
-    background-image: url("/assets/splatter-yellow-white.jpg");
+    background-image: url("./assets/splatter-yellow-white.jpg");
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -637,7 +637,7 @@ footer:before {
 /* ----------------------------- PATCH NOTES -----------------------------  */
 
 #patch-notes-background {
-    background-image: url("/assets/hangingcannibal.png");
+    background-image: url("./assets/hangingcannibal.png");
     background-position: center center;
     background-size: cover;
     padding: 150px 0 150px 0;
@@ -790,7 +790,7 @@ footer:before {
 }
 
 #yellow-studio-logo {
-    background-image: url("/assets/logo-yellow.png");
+    background-image: url("./assets/logo-yellow.png");
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -864,7 +864,7 @@ footer {
 }
 
 #footer-studio-logo {
-    background-image: url("/assets/endnight-logo.png");
+    background-image: url("./assets/endnight-logo.png");
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -893,7 +893,7 @@ footer {
 }
 
 #footer-social-media {
-    background-image: url("/assets/social-media-logos.png");
+    background-image: url("./assets/social-media-logos.png");
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
